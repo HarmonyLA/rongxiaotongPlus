@@ -1,0 +1,74 @@
+# 应用服务 WEB 访问端口
+#server.port=8080
+server:
+  port: 9100
+  #servlet:
+    #context-path: /admin    一级访问路径
+
+#配置数据源
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/rongxiaotong?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  mapper-locations: classpath:Mappers/*.xml      #配置编写sql的那个文件
+  type-aliases-package: com.ldk.api.pojo   #给实体类起一个别名 方便简写 别名默认就是类名
+  configuration:
+    map-underscore-to-camel-case: true  # 开启驼峰映射
+
+#多环境配置加载内容 dev / prod  不写的就是默认default配置
+  #profiles:
+    #active: dev
+
+# ========================zipkin===================
+#management:
+  #zipkin:
+    #tracing:
+      #endpoint: http://localhost:9411/api/v2/spans
+  #tracing:
+    #sampling:
+      #probability: 1.0 #采样率默认为0.1(0.1就是10次只能有一次被记录下来)，值越大收集越及时。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #配置mybatis
+    #mybatis:
+    #mapper-locations: classpath:mappers/*.xml      #配置编写sql的那个文件
+    #type-aliases-package: com.ldk.springboot20250527.pojo   #给实体类起一个别名 方便简写 别名默认就是类名
+    #configuration:
+    #map-underscore-to-camel-case: true  # 开启驼峰映射
+
+
+
+
+
+
+
+
+
+
+
+
+#配置OSS
+#aliyah:
+  #oss:
+   #endpoint: oss-cn-beijing.aliyuncs.com
+   #accessKeyId: LTAI5tEteNgZSCA4vYdvp63y
+   #accessKeySecret: k0g4sZtUOwH2COjFhMhev4fJFj9ZkF
+   #bucketName: myapp-images1
+

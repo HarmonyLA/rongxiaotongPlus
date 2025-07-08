@@ -15,6 +15,7 @@
     <module>commons-api</module>
     <module>rongxiaotonguserbefore</module>
       <module>rongxiaorongother</module>
+    <module>rongxiaotongGoodsResource-service</module>
 
   </modules>
 

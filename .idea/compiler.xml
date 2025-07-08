@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="rongxiaotonguserbefore" />
+        <module name="rongxiaotongGoodsResource-service" />
         <module name="commons-api" />
         <module name="rongxiaorongother" />
         <module name="rongxiaotonguserback" />
