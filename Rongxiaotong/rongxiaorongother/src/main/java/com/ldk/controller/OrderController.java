@@ -29,7 +29,6 @@ public class OrderController {
 
     @Autowired
     OrderService  orderService;
-
     @Value("${aliyah.oss.serverURL}")
     private String serverURL;
     @Value("${aliyah.oss.endpoint}")
