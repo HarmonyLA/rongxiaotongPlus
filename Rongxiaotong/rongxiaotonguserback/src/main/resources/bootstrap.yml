@@ -1,0 +1,37 @@
+# 应用服务 WEB 访问端口
+#server.port=8080
+spring:
+  application:
+    name: user-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+      config:
+        profile-separator: '-'
+        format: yaml
+        watch:
+          wait-time: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #配置OSS
+#aliyah:
+  #oss:
+   #endpoint: oss-cn-beijing.aliyuncs.com
+   #accessKeyId: LTAI5tEteNgZSCA4vYdvp63y
+   #accessKeySecret: k0g4sZtUOwH2COjFhMhev4fJFj9ZkF
+   #bucketName: myapp-images1
+
