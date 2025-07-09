@@ -11,6 +11,7 @@
         <module name="rongxiaotongGoodsResource-service" />
         <module name="commons-api" />
         <module name="rongxiaorongother" />
+        <module name="rongxiaotongZJ" />
         <module name="rongxiaotonguserback" />
       </profile>
     </annotationProcessing>
