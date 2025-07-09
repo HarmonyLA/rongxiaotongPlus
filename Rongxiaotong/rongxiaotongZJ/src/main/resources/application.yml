@@ -1,0 +1,40 @@
+server:
+  port: 9005
+spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      database: 0
+      port: 6379
+  datasource:
+    username: root
+    password: mysql
+    url: jdbc:mysql://localhost:3306/rongxiaotong?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: other-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        prefer-ip-address: true #优先使用服务ip进行注册
+           #openFeign超时控制  为了更好节省内存资源 提搞用户的体验
+
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml      #配置编写sql的那个文件
+  type-aliases-package: com.ldk.api.pojo   #给实体类起一个别名 方便简写 别名默认就是类名
+  configuration:
+    map-underscore-to-camel-case: true  # 开启驼峰映射
+
+    #配置OSS
+aliyah:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI5tEteNgZSCA4vYdvp63y
+    accessKeySecret: k0g4sZtUOwH2COjFhMhev4fJFj9ZkF
+    bucketName: myapp-image123
+    serverURL: https://oss-cn-beijing.aliyuncs.com
