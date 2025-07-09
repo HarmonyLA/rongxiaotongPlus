@@ -65,9 +65,9 @@ springdoc:
     path: /v3/api-docs    #swagger后端请求地址(这个不能随便改)
     enabled: true   #是否开启文档功能
   group-configs:
-    - group: 'default'   #分组名称
+    - group: '商品资源'   #分组名称
       paths-to-match: '/**'   #配置需要匹配的路径,默认为/**
-      packages-to-scan: com.shkj.test    #配置要扫描包的路径,一般配置到启动类所在的包名
+      packages-to-scan: com.Harmony.Controller    #配置要扫描包的路径,一般配置到启动类所在的包名
 #packages-to-scan一定要记得修改-------------------------------------------------------------------
 
 # knife4j的增强配置，不需要增强可以不配(建议配置一下)
@@ -85,7 +85,7 @@ knife4j:
     password: Harmony
 
 swagger3:
-  name: 盛海团队
+  name: 山顶资本
   email: junmoxiaowujishu@gmail.com
   title: Rongxiaotong
   description: this project is used for helping agricultural product sale

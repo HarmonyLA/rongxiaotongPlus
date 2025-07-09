@@ -1,38 +1,47 @@
 package com.ldk.api.dto;
 import com.ldk.api.pojo.Address;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
+
 @Data
+@Schema(description = "地址实体")
 public class AddressDTO {
     /**
      * 地址ID
      */
+    @Schema(description = "地址id")
     private Integer id;
 
     /**
      * 关联用户标识（同POJO）
      */
+    @Schema(description = "关联用户标识")
     private String ownName;
 
     /**
      * 收货人姓名
      */
+    @Schema(description = "收货人姓名")
     private String consignee;
 
     /**
      * 收货人电话（可添加脱敏处理，如隐藏中间4位）
      */
+    @Schema(description = "收货人电话")
     private String phone;
 
     /**
      * 收货地址详情
      */
+    @Schema(description = "收货地址详情")
     private String addressDetail;
 
     /**
      * 是否默认地址（转换为布尔值，更友好）
      * true=是（1），false=否（0或null）
      */
+    @Schema(description = "是否默认地址")
     private Boolean isDefault;
 
     // ========== 扩展：POJO 转 DTO 的工具方法 ==========
