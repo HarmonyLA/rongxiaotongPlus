@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="rongxiaotonguserbefore" />
         <module name="rongxiaotongGoodsResource-service" />
+        <module name="rongxiaotonguserbefore" />
         <module name="commons-api" />
+        <module name="rongxiaorongother (1)" />
         <module name="rongxiaorongother" />
         <module name="rongxiaotongZJ" />
         <module name="rongxiaotonguserback" />

@@ -8,7 +8,7 @@ spring:
       port: 6379
   datasource:
     username: root
-    password: mysql
+    password: 123456
     url: jdbc:mysql://localhost:3306/rongxiaotong?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
   main:

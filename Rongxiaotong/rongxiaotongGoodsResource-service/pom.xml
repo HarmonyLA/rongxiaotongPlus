@@ -23,6 +23,18 @@
     <url>http://maven.apache.org</url>
 
 <dependencies>
+    <!-- Swagger3-knife4j依赖 -->
+    <dependency>
+        <groupId>com.github.xiaoymin</groupId>
+        <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+        <version>4.5.0</version>
+    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+    </dependency>
     <!--web-->
     <dependency>
         <groupId>org.springframework.boot</groupId>

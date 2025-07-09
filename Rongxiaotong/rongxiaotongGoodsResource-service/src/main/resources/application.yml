@@ -54,7 +54,43 @@ mybatis-plus:
     #map-underscore-to-camel-case: true  # 开启驼峰映射
 
 
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    #自定义swagger前端请求路径,输入http:localhost:8080/swagger-ui.html会自动重定向到swagger页面
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs    #swagger后端请求地址(这个不能随便改)
+    enabled: true   #是否开启文档功能
+  group-configs:
+    - group: 'default'   #分组名称
+      paths-to-match: '/**'   #配置需要匹配的路径,默认为/**
+      packages-to-scan: com.shkj.test    #配置要扫描包的路径,一般配置到启动类所在的包名
+#packages-to-scan一定要记得修改-------------------------------------------------------------------
 
+# knife4j的增强配置，不需要增强可以不配(建议配置一下)
+knife4j:
+  enable: true    #开启knife4j,无需添加@EnableKnife4j注解
+  setting:
+    language: zh_cn   #中文
+    swagger-model-name: 实体类列表   #重命名SwaggerModel名称,默认
+  #开启Swagger的Basic认证功能,默认是false
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: Harmony
+    # Basic认证密码
+    password: Harmony
+
+swagger3:
+  name: 盛海团队
+  email: junmoxiaowujishu@gmail.com
+  title: Rongxiaotong
+  description: this project is used for helping agricultural product sale
+  version: 1.0
+  termsOfServiceUrl: xxx
 
 
 
