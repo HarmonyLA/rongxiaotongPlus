@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="rongxiaotongGoodsResource-service" />
         <module name="rongxiaotonguserbefore" />
+        <module name="rongxiaotongGoodsResource-service" />
         <module name="commons-api" />
         <module name="rongxiaorongother (1)" />
         <module name="rongxiaorongother" />
