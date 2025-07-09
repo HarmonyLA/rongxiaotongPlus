@@ -41,6 +41,7 @@ public class JWTToken {
         }
         return  true;
     }
+
     // 根据 token解析出id 和 username 值
     public  static  String getUserNameFromToken(String token){
         Jws<Claims> claimsJws = Jwts.parser().setSigningKey(siganture).parseClaimsJws(token);
