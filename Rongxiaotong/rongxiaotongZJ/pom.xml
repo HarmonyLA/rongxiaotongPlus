@@ -7,10 +7,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>rongxiaotonguserback</artifactId>
+    <artifactId>rongxiaorongother</artifactId>
     <packaging>jar</packaging>
 
-    <name>rongxiaotonguserback</name>
+    <name>rongxiaorongother</name>
+    <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,17 +22,26 @@
         <mybatis-plus.version>3.5.5</mybatis-plus.version>
     </properties>
 
-
     <dependencies>
 
+        <!--阿里云oss依赖坐标-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.17.4</version>
+        </dependency>
 
+        <!--redis依赖包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.ldk.api</groupId>
             <artifactId>commons-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
         <!-- consul config-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -48,27 +58,6 @@
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.ldk.api</groupId>
-            <artifactId>commons-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <!-- consul config-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-bootstrap</artifactId>
-        </dependency>
-
-        <!--SpringCloud consul discovery -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
-        </dependency>
 
         <!--web-->
         <dependency>
@@ -136,6 +125,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ldk</groupId>
+            <artifactId>rongxiaotong20250630</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

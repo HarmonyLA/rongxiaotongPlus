@@ -1,0 +1,110 @@
+# 应用服务 WEB 访问端口
+#server.port=8080
+server:
+  port: 9100
+  #servlet:
+    #context-path: /admin    一级访问路径
+
+#配置数据源
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/rongxiaotong?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis-plus:
+  mapper-locations: classpath:Mappers/*.xml      #配置编写sql的那个文件
+  type-aliases-package: com.ldk.api.pojo   #给实体类起一个别名 方便简写 别名默认就是类名
+  configuration:
+    map-underscore-to-camel-case: true  # 开启驼峰映射
+
+#多环境配置加载内容 dev / prod  不写的就是默认default配置
+  #profiles:
+    #active: dev
+
+# ========================zipkin===================
+#management:
+  #zipkin:
+    #tracing:
+      #endpoint: http://localhost:9411/api/v2/spans
+  #tracing:
+    #sampling:
+      #probability: 1.0 #采样率默认为0.1(0.1就是10次只能有一次被记录下来)，值越大收集越及时。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #配置mybatis
+    #mybatis:
+    #mapper-locations: classpath:mappers/*.xml      #配置编写sql的那个文件
+    #type-aliases-package: com.ldk.springboot20250527.pojo   #给实体类起一个别名 方便简写 别名默认就是类名
+    #configuration:
+    #map-underscore-to-camel-case: true  # 开启驼峰映射
+
+
+# springdoc-openapi项目配置
+springdoc:
+  swagger-ui:
+    #自定义swagger前端请求路径,输入http:localhost:8080/swagger-ui.html会自动重定向到swagger页面
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs    #swagger后端请求地址(这个不能随便改)
+    enabled: true   #是否开启文档功能
+  group-configs:
+    - group: 'default'   #分组名称
+      paths-to-match: '/**'   #配置需要匹配的路径,默认为/**
+      packages-to-scan: com.shkj.test    #配置要扫描包的路径,一般配置到启动类所在的包名
+#packages-to-scan一定要记得修改-------------------------------------------------------------------
+
+# knife4j的增强配置，不需要增强可以不配(建议配置一下)
+knife4j:
+  enable: true    #开启knife4j,无需添加@EnableKnife4j注解
+  setting:
+    language: zh_cn   #中文
+    swagger-model-name: 实体类列表   #重命名SwaggerModel名称,默认
+  #开启Swagger的Basic认证功能,默认是false
+  basic:
+    enable: true
+    # Basic认证用户名
+    username: Harmony
+    # Basic认证密码
+    password: Harmony
+
+swagger3:
+  name: 盛海团队
+  email: junmoxiaowujishu@gmail.com
+  title: Rongxiaotong
+  description: this project is used for helping agricultural product sale
+  version: 1.0
+  termsOfServiceUrl: xxx
+
+
+
+
+
+
+
+
+
+#配置OSS
+#aliyah:
+  #oss:
+   #endpoint: oss-cn-beijing.aliyuncs.com
+   #accessKeyId: LTAI5tEteNgZSCA4vYdvp63y
+   #accessKeySecret: k0g4sZtUOwH2COjFhMhev4fJFj9ZkF
+   #bucketName: myapp-images1
+
